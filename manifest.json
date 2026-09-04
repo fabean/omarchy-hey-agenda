@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "id": "io.github.fabean.hey-agenda",
+  "name": "HEY Agenda",
+  "version": "1.0.0",
+  "author": "Josh Fabean",
+  "license": "MIT",
+  "description": "The Omarchy calendar with your HEY agenda under it: a daily agenda you can expand to the week, and a bar icon when something is close.",
+  "kinds": [
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "barWidget": "BarWidget.qml"
+  },
+  "barWidget": {
+    "displayName": "HEY Agenda",
+    "description": "The stock date/time label, with a calendar icon when something is close, and a calendar popup carrying your HEY agenda.",
+    "category": "Time",
+    "aliases": [
+      "hey",
+      "agenda",
+      "calendar",
+      "events"
+    ],
+    "allowMultiple": false,
+    "defaultSection": "center",
+    "defaults": {
+      "format": "dddd HH:mm",
+      "alertLeadMinutes": 15,
+      "timeFormat": "auto",
+      "refreshIntervalSec": 300,
+      "dimPast": true
+    },
+    "schema": [
+      {
+        "key": "alertLeadMinutes",
+        "type": "integer",
+        "label": "Show the calendar icon this many minutes ahead",
+        "min": 0,
+        "max": 240,
+        "step": 5,
+        "defaultValue": 15,
+        "description": "The icon appears this long before an event starts and stays until it ends. 0 turns it off. All-day events never trigger it."
+      },
+      {
+        "key": "format",
+        "type": "string",
+        "label": "Bar date format",
+        "defaultValue": "dddd HH:mm",
+        "description": "Qt date format, same as the stock Clock widget. Right-click the widget to cycle presets."
+      },
+      {
+        "key": "timeFormat",
+        "type": "enum",
+        "label": "Agenda event times",
+        "options": [
+          "auto",
+          "12",
+          "24"
+        ],
+        "defaultValue": "auto",
+        "description": "\"auto\" follows the system locale."
+      },
+      {
+        "key": "refreshIntervalSec",
+        "type": "integer",
+        "label": "Refresh interval (seconds)",
+        "min": 30,
+        "max": 3600,
+        "step": 30,
+        "defaultValue": 300
+      },
+      {
+        "key": "dimPast",
+        "type": "boolean",
+        "label": "Dim events that have already ended",
+        "defaultValue": true
+      }
+    ]
+  }
+}

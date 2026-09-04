@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Model.js unit tests. Node only, no dependencies.
+#
+# The suite runs once per timezone. An all-day event is a floating date and a
+# timed event is an instant, and the bug that shows up when you confuse the two
+# only appears off UTC — east of Greenwich in one direction, west in the other.
+set -euo pipefail
+cd "$(dirname "$0")"
+
+status=0
+for tz in UTC America/Los_Angeles Asia/Tokyo Pacific/Kiritimati; do
+  echo "── TZ=$tz"
+  TZ="$tz" node model.test.js || status=1
+  echo
+done
+exit "$status"

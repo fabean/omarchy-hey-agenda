@@ -4,15 +4,15 @@ https://github.com/fabean/omarchy-hey-agenda
 
 ### Category
 
-Time
+Productivity
 
 ### Tags
 
-calendar, bar, quickshell, hey, email
+Bar, Quickshell
 
 ### Suggest a missing tag
 
-_No response_
+Calendar
 
 ### Maintainer notes
 

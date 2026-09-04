@@ -6,6 +6,12 @@ The bar label is the ordinary clock — same formats, same right-click ring, sam
 
 Clicking the label opens the familiar calendar popup — hero date, year meter, month grid with ISO week numbers — now with a dot under every day that holds events, and today's agenda below the grid. One button expands the agenda to the whole week.
 
+![The calendar popup, with today's agenda under the month grid](preview.png)
+
+One button expands that agenda to the whole week — grouped by day, empty days kept, days already gone dimmed:
+
+![The same panel with the agenda expanded to the week](preview-week.png)
+
 ## Requirements
 
 - Omarchy with the Quattro shell plugin system

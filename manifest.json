@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "io.github.fabean.hey-agenda",
   "name": "HEY Agenda",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Josh Fabean",
   "license": "MIT",
   "description": "The Omarchy calendar with your HEY agenda under it: a daily agenda you can expand to the week, and a bar icon when something is close.",

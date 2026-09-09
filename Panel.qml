@@ -105,9 +105,10 @@ Panel {
   }
 
   function close() {
+    // Release the keyboard grab before optional bar and editor cleanup.
+    root.controller.hide()
     setCenterHoverRevealSuppressed(false)
     if (root.editingLife) root.cancelEditingLife()
-    root.controller.hide()
   }
 
   function toggle() {
@@ -122,8 +123,8 @@ Panel {
   }
 
   function setCenterHoverRevealSuppressed(value) {
-    if (root.bar && "centerHoverRevealSuppressed" in root.bar)
-      root.bar.centerHoverRevealSuppressed = value
+    if (root.bar && typeof root.bar.setCenterHoverRevealSuppressed === "function")
+      root.bar.setCenterHoverRevealSuppressed(value)
   }
 
   // Opening is also a reason to re-read: the panel is usually opened because
